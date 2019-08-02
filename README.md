@@ -15,8 +15,9 @@ The client decides on the arbitrary prepended text by using a query argument nam
 
 lets see this example, script with ?callback=myFunction and response json looks like myFunctiond .....})
 
-<script>
-function clickButton() {
+<script> </br>
+function clickButton() {</br>
+  
   var s = document.createElement("script");
   s.src = "https://www.w3schools.com/js/demo_jsonp2.php?callback=myFunction";
   /*
