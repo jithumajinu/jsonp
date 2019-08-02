@@ -18,16 +18,16 @@ lets see this example, script with ?callback=myFunction and response json looks 
 <script> </br>
 function clickButton() {</br>
   
-  var s = document.createElement("script");
-  s.src = "https://www.w3schools.com/js/demo_jsonp2.php?callback=myFunction";
-  /*
-   myFunction({"name":"John", "age":30, "city":"New York"});
-  */
-  
-  document.body.appendChild(s);
-}
-
-function myFunction(myObj) {
-  document.getElementById("demo").innerHTML = myObj.name;
-}
-</script>
+  var s = document.createElement("script");</br>
+  s.src = "https://www.w3schools.com/js/demo_jsonp2.php?callback=myFunction";</br>
+  /*</br>
+   myFunction({"name":"John", "age":30, "city":"New York"});</br>
+  */</br>
+  </br>
+  document.body.appendChild(s);</br>
+}</br>
+</br>
+function myFunction(myObj) {</br>
+  document.getElementById("demo").innerHTML = myObj.name;</br>
+}</br>
+</script></br>
