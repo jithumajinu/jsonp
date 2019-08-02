@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Request With a Callback Function</h2>
+<p id="demo"></p>
+	
+<script>
+
+function clickButton(callback, url) {
+    var callbackMethodName = "cb_";
+    var uid = (new Date()).getTime();
+	callbackMethodName +=  uid;
+
+    // add the script tag to the document, cross fingers
+    var sc = document.createElement("script");
+        sc.id="script_"+callbackMethodName;
+        sc.src = url+"?callback="+callbackMethodName;
+        document.body.appendChild(sc);
+        document.getElementById(sc.id).remove();
+	   
+	  /// var ary_callbacks = [];   
+	   window[callbackMethodName] = function(data){
+                          console.log("Response : "+JSON.stringify(data));
+	                      callback();	   
+        };	
+};
+function doSomething(){
+console.log("hai1");
+console.log("hai2");
+}
+clickButton(doSomething, "http://localhost/jsonserver/getJSONP.php");
+
+
+</script>
+
+</body>
+</html>

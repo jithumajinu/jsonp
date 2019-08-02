@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script>							
+			function jsonCall(url_){
+			    $.ajax({
+					url:url_,			
+                    dataType: 'jsonp',
+					jsonpCallback:'jsonCallback'               
+                });			 
+			}
+			
+			jsonCallback = function (data) {
+			    console.log("Response : "+JSON.stringify(data));
+	            $('#josonDisplayID').html(JSON.stringify(data));
+            };
+						
+			$(function() {
+		         $( "#jsonp" ).click(function() {
+                    jsonCall("http://localhost/jsonserver/getJSONP.php");
+                 });
+				 
+				 $( "#json" ).click(function() {
+                    jsonCall("http://localhost/jsonserver/getJSON.php");
+                 });				 
+            });
+			
+        </script>
+    </head>
+    <body>
+	      <button id="jsonp">jsonp</button>
+		  <button id="json">simplejson</button>
+		  <div id = 'josonDisplayID'></div>
+    </body>
+</html>
+
+ 
