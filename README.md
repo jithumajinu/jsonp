@@ -13,6 +13,11 @@ The working of JSONP  is simple but requires a little bit of server-side coopera
 
 The client decides on the arbitrary prepended text by using a query argument named jsonp with the text to prepend. Simple! With an empty jsonp argument, the result document is simply JSON wrapped in parentheses.
 
+/*
+simply ....
+JSONP stands for JSON with padding, and it provides a way for the client to specify some code that should be added to the start of the JSON response. This allows the JSONP response to be directly executed in the browser. 
+*/
+
 lets see this example, script with ?callback=myFunction and response json looks like myFunctiond .....})
 
 <script> </br>
