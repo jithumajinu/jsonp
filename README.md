@@ -24,9 +24,9 @@ lets see this example, script with ?callback=myFunction and response json looks 
 function clickButton() {</br>
   
   var s = document.createElement("script");</br>
-  s.src = "https://www.w3schools.com/js/demo_jsonp2.php?callback=myFunction";</br>
+  s.src = "https://localhost:8080/test/jsonp.php?callback=myFunction";</br>
   /*</br>
-   myFunction({"name":"John", "age":30, "city":"New York"});</br>
+   myFunction({"name":"jithu", "age":30, "city":"Tokyo"});</br>
   */</br>
   </br>
   document.body.appendChild(s);</br>
