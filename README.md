@@ -36,3 +36,17 @@ function myFunction(myObj) {</br>
   document.getElementById("demo").innerHTML = myObj.name;</br>
 }</br>
 </script></br>
+
+
+git init
+git add README.md
+git commit -m "first commit"
+
+or push an existing repository from the command line
+
+git remote add origin https://github.com/jithumajinu/jsonp.git
+git push -u origin master
+
+
+
+
